@@ -1,10 +1,11 @@
-import * as React from "react";
+import ContactInfo from '../Components/Contact';
 
 function Contact() {
+
   return (
     <div className="Contact">
-     
-      HELLO Contact
+     <h2>CONTACT ME</h2>
+      <ContactInfo />
     </div>
   );
 }

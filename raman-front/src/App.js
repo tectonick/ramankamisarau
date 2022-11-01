@@ -6,7 +6,7 @@ import News from "./Pages/News";
 import Gallery from "./Pages/Gallery";
 import Bio from "./Pages/Bio";
 import Contact from "./Pages/Contact";
-import Shows from "./Pages/Shows";
+import Concerts from "./Pages/Concerts";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="/shows" element={<Shows />} />
+          <Route path="/concerts" element={<Concerts />} />
           <Route path="/news" element={<News />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/bio" element={<Bio />} />
