@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
+import Api from "../Utility/api";
 
 function Gallery() {
   const [GalleryImages, setGalleryImages] = useState([]);
 
   useEffect(() => {
-    setGalleryImages(["/img/test1.png", "/img/test2.png"]);
+    Api.getGalleryImages().then((data)=>{
+      setGalleryImages(data);
+    })
   }, []);
   return (
     <div className="Gallery">

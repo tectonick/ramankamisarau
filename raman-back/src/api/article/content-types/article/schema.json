@@ -1,11 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "concerts",
+  "collectionName": "articles",
   "info": {
-    "singularName": "concert",
-    "pluralName": "concerts",
-    "displayName": "Concert",
-    "description": ""
+    "singularName": "article",
+    "pluralName": "articles",
+    "displayName": "Article"
   },
   "options": {
     "draftAndPublish": true
@@ -19,12 +18,9 @@
       "type": "text"
     },
     "Date": {
-      "type": "datetime"
-    },
-    "Link": {
       "type": "string"
     },
-    "Place": {
+    "Link": {
       "type": "string"
     }
   }

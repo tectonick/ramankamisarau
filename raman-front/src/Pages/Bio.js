@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react';
+import Api from "../Utility/api";
 
 function Bio() {
   const [BioText, setBioText] = useState("");
 
   useEffect(() => {
-    setBioText("Lorem ipsum");
+    Api.getBioText().then((data)=>{
+      setBioText(data ?? "");
+    })
   }, []);
 
   return (
     <div className="Bio">
       <h2>BIOGRAPHY</h2>
-      {BioText}
+      <pre>{BioText}</pre>
     </div>
   );
 }
