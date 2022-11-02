@@ -1,6 +1,5 @@
 
-const PORT = 1337;
-const HOST = "127.0.0.1";
+import Config from "../Config/config"
 
 const Api =  {
     async getConcerts() {
@@ -20,12 +19,12 @@ const Api =  {
         return images?.map(image => image.Src);
     },
     async getResourcesCollection(resource){
-        let result = await fetch(`http://${HOST}:${PORT}/api/${resource}`);
+        let result = await fetch(`http://${Config.Host}:${Config.Port}/api/${resource}`);
         let json = await result.json();
         return json.data?.map((resource) => resource.attributes);
     },
     async getSingleResource(resource){
-        let result = await fetch(`http://${HOST}:${PORT}/api/${resource}`);
+        let result = await fetch(`http://${Config.Host}:${Config.Port}/api/${resource}`);
         let json = await result.json();
         return json.data?.attributes;
     },
