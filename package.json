@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "npm run killprod && npm-run-all --parallel prodbackbuild prodfrontbuild && nohup npm-run-all --parallel prodfront prodfront &",
+    "start": "npm run killprod && prodfrontbuild && nohup npm-run-all --parallel prodfront prodfront &",
     "dev": "npm-run-all --parallel devback devfront",
     "devback": "npm run --prefix ./raman-back start",
     "devfront": "npm run --prefix ./raman-front start",
