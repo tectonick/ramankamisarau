@@ -1,0 +1,37 @@
+{
+  "name": "ramankamisarau",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run killprod && npm-run-all --parallel prodbackbuild prodfrontbuild && nohup npm-run-all --parallel prodfront prodfront &",
+    "dev": "npm-run-all --parallel devback devfront",
+    "devback": "npm run --prefix ./raman-back start",
+    "devfront": "npm run --prefix ./raman-front start",
+    "prodback": "npm run --prefix ./raman-back start",
+    "prodfront": "nohup http-server ./raman-front/build -p 80 &",
+    "prodbackbuild": "npm run --prefix ./raman-back build",
+    "prodfrontbuild": "npm run --prefix ./raman-front build",
+    "killprod": "skill node && skill http-server",
+    "git": "git add * && git commit && git push",
+    "git-amend": "git add * && git commit --amend && git push --force",
+    "deploy": "git ftp push",
+    "restart": "powershell .\\deploy\\restart.ps1",
+    "status": "powershell .\\deploy\\check-status.ps1",
+    "pipeline": "npm run git && npm run deploy && npm run restart && npm run status",
+    "hotfix": "npm run git-amend && npm run deploy && npm run restart && npm run status"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tectonick/ramankamisarau.git"
+  },
+  "author": "Nick Kiselev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tectonick/ramankamisarau/issues"
+  },
+  "homepage": "https://github.com/tectonick/ramankamisarau#readme",
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
