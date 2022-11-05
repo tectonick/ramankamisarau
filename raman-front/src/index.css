@@ -149,7 +149,7 @@ nav ul li a:hover{
   margin: 2px 0;
 }
 
-.gallery-grid img:hover{
+.gallery-grid img.preview-image:hover{
   filter: brightness(40%);
   transform: scale(98.5%);
 }
