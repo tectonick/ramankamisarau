@@ -11,7 +11,7 @@
     "prodback": "npm run --prefix ./raman-back start",
     "prodfront": "nohup http-server ./raman-front/build -p 80 &",
     "prodbackbuild": "npm run --prefix ./raman-back build",
-    "prodfrontbuild": "npm run --prefix ./raman-front build && cp ./raman-front/build/index.html cp ./raman-front/build/404.html",
+    "prodfrontbuild": "npm run --prefix ./raman-front build && cp ./raman-front/build/index.html ./raman-front/build/404.html",
     "killprod": "skill node && skill http-server",
     "git": "git add * && git commit && git push",
     "git-amend": "git add * && git commit --amend && git push --force",
