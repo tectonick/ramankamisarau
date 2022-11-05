@@ -1,8 +1,9 @@
 import React from 'react';
 
-function Article({title, description, date, link}) {
+function Article({supertitle, title, description, date, link}) {
     return ( 
-        <div className="article">
+        <div className="article block">
+            {supertitle && <h2 className='supertitle'>{supertitle}</h2>}
             <h2>{title}</h2>
             <p>{date}</p>
             <p>{description}</p>

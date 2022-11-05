@@ -13,7 +13,7 @@ function ContactInfo() {
     }, []);
 
     return ( 
-        <div className='contact-info'>
+        <div className='contact-info block'>
             {ContactData && <a href={"mailto:"+ContactData.Email}>Email: {ContactData.Email}</a>} <br/>
             {ContactData && <a href={"tel:"+ContactData.Phone}>Tel: {ContactData.Phone}</a>}
         </div>

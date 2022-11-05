@@ -11,7 +11,7 @@ function Bio() {
   }, []);
 
   return (
-    <div className="Bio">
+    <div className="bio block">
       <h2>BIOGRAPHY</h2>
       <pre>{BioText}</pre>
     </div>

@@ -1,8 +1,9 @@
 import React from 'react';
 
-function Concert({title, place, description, date, link}) {
+function Concert({supertitle, title, place, description, date, link}) {
     return ( 
-        <div className="concert">
+        <div className="concert block">
+            {supertitle && <h2 className='supertitle'>{supertitle}</h2>}
             <h2>{title}</h2>
             <p>{place}</p>
             <p>{description}</p>
