@@ -1,12 +1,12 @@
-:root{
-  --accent-color: rgb(194,177,130);
+:root {
+  --accent-color: rgb(194, 177, 130);
 }
 
 body {
   margin: 0;
   min-height: 100vh;
-  display:flex; 
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
@@ -20,12 +20,13 @@ body {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.65)), url("../public/img/background.webp");
   background-attachment: fixed, fixed;
   background-size: cover, cover;
+  background-position-x: center, center;
 }
 
 #page-container {
   min-height: 100vh;
-  display:flex; 
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
 }
 
 main {
@@ -35,9 +36,35 @@ main {
 }
 
 footer {
-  min-height:35px;
+  min-height: 35px;
   margin: 0 15%;
   padding-top: 15px;
+}
+
+.html-content {
+  margin: 1rem 0;
+}
+
+.html-content h1 {
+  color: white;
+  font-size: 2rem;
+}
+
+.link-button {
+  border: 0;
+  padding: 0;
+  background: none;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+}
+
+.link-button:hover {
+  color: var(--accent-color);
+}
+
+.time-links {
+  margin-bottom: 10px;
 }
 
 a {
@@ -69,7 +96,8 @@ h2#pianist {
   font-weight: 100;
 }
 
-code, pre {
+code,
+pre {
   font-family: inherit;
 }
 
@@ -78,7 +106,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 
 .hamburger {
@@ -95,20 +123,25 @@ nav ul li {
   margin-right: 10px;
 }
 
-nav ul li a{
+nav ul li a {
   color: white;
   transition: color 0.2s;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
   color: var(--accent-color);
 }
 
-#social a img:hover{
+#social a img:hover {
   filter: brightness(200%);
 }
 
-@media (max-width:600px){
+@media (max-width:800px) {
+  main {
+    padding-top: 15%;
+    margin: 0 5%;
+  }
+
   .hamburger {
     display: inline-block !important;
     position: absolute;
@@ -128,14 +161,14 @@ nav ul li a:hover{
     transition: right 0.5s;
   }
 
-  nav ul.is-hidden{
+  nav ul.is-hidden {
     right: -100%;
   }
 
-  nav ul li{
+  nav ul li {
     display: block;
     font-size: 2rem;
-    padding-bottom: 20%;
+    padding-bottom: 10%;
     text-align: end;
   }
 
@@ -184,19 +217,19 @@ nav ul li a:hover{
   column-gap: 7px;
 }
 
-.gallery-grid img{
+.gallery-grid img {
   cursor: pointer;
   width: 100%;
   transition: filter 0.3s, transform 0.3s;
   margin: 2px 0;
 }
 
-.gallery-grid img.preview-image:hover{
+.gallery-grid img.preview-image:hover {
   filter: brightness(40%);
   transform: scale(98.5%);
 }
 
 #main-youtube-video {
   width: 100%;
-  height: 30vw;
+  height: 40vw;
 }

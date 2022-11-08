@@ -15,7 +15,7 @@ function News() {
     <div className="News">
       <h2>NEWS</h2>
       {Articles.map((article)=>(
-        <Article key={article.Title} title={article.Title} description={article.Description} date={article.Date}/>)
+        <Article key={article.Title} title={article.Title} description={article.Description} date={new Date(article.Date).toLocaleString()}/>)
       )}
     </div>
   );

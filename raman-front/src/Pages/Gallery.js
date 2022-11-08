@@ -31,7 +31,13 @@ function Gallery() {
           slide={lightboxController.slide}
         />
         {GalleryImages.map((image, index) => (
-          <img src={image} className="preview-image" loading="lazy" alt="" onClick={() => openLightboxOnSlide(index+1)} />
+          <img
+            src={image}
+            className="preview-image"
+            loading="lazy"
+            alt=""
+            onClick={() => openLightboxOnSlide(index + 1)}
+          />
         ))}
       </div>
     </div>

@@ -6,7 +6,7 @@ function Concert({supertitle, title, place, description, date, link}) {
             {supertitle && <h2 className='supertitle'>{supertitle}</h2>}
             <h2>{title}</h2>
             <p>{place}</p>
-            <p>{description}</p>
+            <div className='html-content' dangerouslySetInnerHTML={{ __html: description }} />
             <p>{date}</p>
             <a href={link}>Read more</a>
         </div>

@@ -5,11 +5,11 @@ import Api from "../Utility/api";
 
 function Home() {
     const [LatestArticle, setLatestArticle] = useState({});
-    const [LatestConcert, setLatestConcert] = useState({});
+    const [NearestConcert, setNearestConcert] = useState({});
 
     useEffect(() => {
-        Api.getLastConcert().then((data)=>{
-            setLatestConcert(data);
+        Api.getNearConcert().then((data)=>{
+            setNearestConcert(data);
         })
         Api.getLastArticle().then((data)=>{
             setLatestArticle(data);
@@ -18,9 +18,9 @@ function Home() {
   return (
     <div className="Home">
         <h1>Raman Kamisarau</h1> 
-        <h2 id="pianist">Pianist</h2>
-        {LatestConcert && <Concert supertitle="UPCOMING PERFORMANCE" title={LatestConcert.Title} place={LatestConcert.Place} description={LatestConcert.Description} date={LatestConcert.Date} link={"/concerts"}/>}
-        {LatestArticle && <Article supertitle="LATEST NEWS" title={LatestArticle.Title} description={LatestArticle.Description} date={LatestArticle.Date} link={"/news"}/>}
+        <h2 id="pianist">Concert pianist based in Switzerland</h2>
+        {NearestConcert && <Concert supertitle="UPCOMING PERFORMANCE" title={NearestConcert.Title} place={NearestConcert.Place} description={NearestConcert.Description} date={new Date(NearestConcert.Date).toLocaleString()} link={"/concerts"}/>}
+        {LatestArticle && <Article supertitle="LATEST NEWS" title={LatestArticle.Title} description={LatestArticle.Description} date={new Date(LatestArticle.Date).toLocaleString()} link={"/news"}/>}
         <iframe id="main-youtube-video" src="https://www.youtube.com/embed/xFHpvXL9Cvg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   );

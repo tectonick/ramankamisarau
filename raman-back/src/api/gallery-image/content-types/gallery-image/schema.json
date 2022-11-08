@@ -12,19 +12,23 @@
   },
   "pluginOptions": {},
   "attributes": {
+    "Title": {
+      "type": "string",
+      "default": "New image"
+    },
     "Src": {
-      "type": "string"
+      "type": "string",
+      "required": true
     },
     "Image": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ]
+      ],
+      "type": "media",
+      "multiple": false
     }
   }
 }

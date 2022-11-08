@@ -6,7 +6,7 @@ function Article({supertitle, title, description, date, link}) {
             {supertitle && <h2 className='supertitle'>{supertitle}</h2>}
             <h2>{title}</h2>
             <p>{date}</p>
-            <p>{description}</p>
+            <div className='html-content' dangerouslySetInnerHTML={{ __html: description }} />
             {link && <a href={link}>Read more</a>}
         </div>
      );

@@ -13,19 +13,21 @@
   "pluginOptions": {},
   "attributes": {
     "Title": {
-      "type": "string"
-    },
-    "Description": {
-      "type": "text"
+      "type": "string",
+      "required": true
     },
     "Date": {
-      "type": "datetime"
+      "type": "datetime",
+      "required": true
     },
     "Link": {
       "type": "string"
     },
     "Place": {
       "type": "string"
+    },
+    "Description": {
+      "type": "richtext"
     }
   }
 }

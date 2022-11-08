@@ -28,9 +28,11 @@ const Api =  {
         let json = await result.json();
         return json.data?.attributes;
     },
-    async getLastConcert() {
+    async getNearConcert() {
         let concerts = await this.getConcerts();
-        return concerts?.sort((a,b) => b.Date - a.Date)[0];
+        let sortedConcerts = concerts?.sort((a,b) => Date.parse(a.Date) - Date.parse(b.Date));
+        let todayDate = Date.now();
+        return sortedConcerts.find((concert)=> Date.parse(concert.Date) > todayDate)
     },
     async getLastArticle() {
         let articles = await this.getArticles();

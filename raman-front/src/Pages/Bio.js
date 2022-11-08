@@ -13,7 +13,7 @@ function Bio() {
   return (
     <div className="bio block">
       <h2>BIOGRAPHY</h2>
-      <pre>{BioText}</pre>
+      <div className='html-content' dangerouslySetInnerHTML={{ __html: BioText }} />
     </div>
   );
 }
