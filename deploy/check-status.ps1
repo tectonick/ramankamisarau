@@ -1,5 +1,5 @@
 echo "Checking site availability (give it 20 seconds)"
-Start-Sleep -Seconds 20
+Start-Sleep -Seconds 40
 $statusfront = (curl nickkiselev.me).StatusCode;
 $statusback = (curl http://nickkiselev.me:1337).StatusCode;
 echo "Front status code is $statusfront"
