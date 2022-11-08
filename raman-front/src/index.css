@@ -81,6 +81,10 @@ nav {
   font-size: 0.9rem;
 }
 
+.hamburger {
+  display: none !important;
+}
+
 nav ul {
   list-style-type: none;
   display: inline-block;
@@ -102,6 +106,44 @@ nav ul li a:hover{
 
 #social a img:hover{
   filter: brightness(200%);
+}
+
+@media (max-width:600px){
+  .hamburger {
+    display: inline-block !important;
+    position: absolute;
+    right: 3%;
+    top: 0;
+  }
+
+  nav ul {
+    position: fixed;
+    right: 0;
+    top: 10px;
+    background-color: black;
+    width: 60%;
+    height: 100%;
+    padding-top: 30%;
+    padding-right: 5%;
+    transition: right 0.5s;
+  }
+
+  nav ul.is-hidden{
+    right: -100%;
+  }
+
+  nav ul li{
+    display: block;
+    font-size: 2rem;
+    padding-bottom: 20%;
+    text-align: end;
+  }
+
+  #social {
+    position: absolute;
+    left: 10%;
+    top: 10px;
+  }
 }
 
 
@@ -152,4 +194,9 @@ nav ul li a:hover{
 .gallery-grid img.preview-image:hover{
   filter: brightness(40%);
   transform: scale(98.5%);
+}
+
+#main-youtube-video {
+  width: 100%;
+  height: 30vw;
 }

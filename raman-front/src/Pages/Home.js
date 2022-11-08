@@ -21,7 +21,7 @@ function Home() {
         <h2 id="pianist">Pianist</h2>
         {LatestConcert && <Concert supertitle="UPCOMING PERFORMANCE" title={LatestConcert.Title} place={LatestConcert.Place} description={LatestConcert.Description} date={LatestConcert.Date} link={"/concerts"}/>}
         {LatestArticle && <Article supertitle="LATEST NEWS" title={LatestArticle.Title} description={LatestArticle.Description} date={LatestArticle.Date} link={"/news"}/>}
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/xFHpvXL9Cvg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe id="main-youtube-video" src="https://www.youtube.com/embed/xFHpvXL9Cvg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
   );
 }
