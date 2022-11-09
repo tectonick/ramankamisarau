@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
-import Concert from "../Components/Concert";
 import Api from "../Utility/api";
+import ConcertItems from "../Components/ConcertItems";
+import PaginatedItems from "../Components/PaginatedItems";
 
 function Concerts() {
+
   const [ConcertsList, setConcertsList] = useState([]);
 
   const getConcerts = (past = false) => {
@@ -34,16 +36,7 @@ function Concerts() {
           Archive
         </button>
       </div>
-      {ConcertsList.map((concert) => (
-        <Concert
-          key={concert.Title}
-          title={concert.Title}
-          place={concert.Place}
-          description={concert.Description}
-          date={new Date(concert.Date).toLocaleString()}
-          link={concert.Link}
-        />
-      ))}
+      <PaginatedItems Type={ConcertItems} items={ConcertsList}/>
     </div>
   );
 }

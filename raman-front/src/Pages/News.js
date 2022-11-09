@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import Article from "../Components/Article";
+import ArticleItems from "../Components/ArticleItems";
 import Api from "../Utility/api";
+import PaginatedItems from "../Components/PaginatedItems";
+
 
 function News() {
   const [Articles, setArticles] = useState([]);
@@ -14,9 +16,7 @@ function News() {
   return (
     <div className="News">
       <h2>NEWS</h2>
-      {Articles.map((article)=>(
-        <Article key={article.Title} title={article.Title} description={article.Description} date={new Date(article.Date).toLocaleString()}/>)
-      )}
+      <PaginatedItems Type={ArticleItems} items={Articles}/>
     </div>
   );
 }

@@ -1,0 +1,21 @@
+import React from "react";
+import Concert from "./Concert";
+
+function ConcertItems({ items }) {
+  return (
+    <>
+      {items.map((concert) => (
+        <Concert
+          key={concert.Title}
+          title={concert.Title}
+          place={concert.Place}
+          description={concert.Description}
+          date={new Date(concert.Date).toLocaleString()}
+          link={concert.Link}
+        />
+      ))}
+    </>
+  );
+}
+
+export default ConcertItems;

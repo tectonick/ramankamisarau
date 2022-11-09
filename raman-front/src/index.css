@@ -233,3 +233,19 @@ nav ul li a:hover {
   width: 100%;
   height: 40vw;
 }
+
+ul[role="navigation"] {
+  list-style: none;
+  display: flex;
+}
+ul[role="navigation"] li {
+  cursor: pointer;
+  margin: 0 5px;
+}
+ul[role="navigation"] li a:hover {
+  color:var(--accent-color);
+}
+
+ul[role="navigation"] li.selected a{
+  color:var(--accent-color);
+}
