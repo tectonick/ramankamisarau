@@ -65,13 +65,13 @@ function Navbar() {
 
       <button
         id="hamburger"
-        class="hamburger hamburger--squeeze"
+        className="hamburger hamburger--squeeze"
         ref={hamburger}
         onClick={() => toggleSideMenu()}
         type="button"
       >
-        <span class="hamburger-box">
-          <span class="hamburger-inner"></span>
+        <span className="hamburger-box">
+          <span className="hamburger-inner"></span>
         </span>
       </button>
     </nav>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Api from "../Utility/api";
 import FsLightbox from "fslightbox-react";
+import Config from "../Config/config";
 
 function Gallery() {
   const [GalleryImages, setGalleryImages] = useState([]);
@@ -14,6 +15,11 @@ function Gallery() {
       toggler: !lightboxController.toggler,
       slide: number,
     });
+  }
+
+  function isExternalLink(link){
+    let regex =  /https?:\/\/.*/i;
+    return regex.test(link);
   }
 
   useEffect(() => {
@@ -32,7 +38,8 @@ function Gallery() {
         />
         {GalleryImages.map((image, index) => (
           <img
-            src={image}
+            key={index}
+            src={isExternalLink(image) ? image : `http://${Config.Api.Host}:${Config.Api.Port}${image}`}
             className="preview-image"
             loading="lazy"
             alt=""

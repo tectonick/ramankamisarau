@@ -36,7 +36,7 @@ function Concerts() {
           Archive
         </button>
       </div>
-      <PaginatedItems Type={ConcertItems} items={ConcertsList}/>
+      {ConcertsList.length>0 ? <PaginatedItems Type={ConcertItems} items={ConcertsList}/> : <p>Nothing for now. Stay tuned for updates.</p>}
     </div>
   );
 }

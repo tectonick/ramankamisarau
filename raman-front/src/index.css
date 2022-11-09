@@ -2,6 +2,11 @@
   --accent-color: rgb(194, 177, 130);
 }
 
+@font-face {
+  font-family: Manrope-Thin;
+  src: url("./Styles/Fonts/manrope-thin.otf");
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -11,9 +16,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
   color: white;
-  font-family: 'Lucida Sans', Arial, sans-serif;
-  letter-spacing: -0.03rem;
-  font-weight: 50;
+  font-family: 'Manrope-Thin', 'Lucida Sans', Arial, sans-serif;
+  letter-spacing: 0.05rem;
+  overflow: overlay;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width:7px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.01);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
 }
 
 #root {
@@ -73,7 +95,7 @@ a {
 }
 
 h1 {
-  letter-spacing: 0.02rem;
+  letter-spacing: 0.5rem;
   color: var(--accent-color);
   font-size: 4rem;
   margin-bottom: 10px;
@@ -81,7 +103,6 @@ h1 {
 
 h2#pianist {
   font-size: 1.1rem;
-  font-style: italic;
   margin-bottom: 50px;
 }
 
@@ -142,6 +163,11 @@ nav ul li a:hover {
     margin: 0 5%;
   }
 
+  
+  h1 {
+    letter-spacing: 0.3rem;
+    font-size: 3rem;
+  }
   .hamburger {
     display: inline-block !important;
     position: absolute;
@@ -197,6 +223,10 @@ nav ul li a:hover {
   transition: color 0.3s, background-color 0.3s;
 }
 
+.contact-info p {
+  margin: 10px;
+}
+
 .block a:hover {
   color: white;
   background-color: black;
@@ -248,4 +278,16 @@ ul[role="navigation"] li a:hover {
 
 ul[role="navigation"] li.selected a{
   color:var(--accent-color);
+}
+
+.separator {
+  width: 5%;
+  margin: 1rem 0;
+  border-bottom: solid var(--accent-color) 2px;
+}
+
+.block .date {
+  color: var(--accent-color);
+  margin: 0;
+  font-size: 0.85rem;
 }

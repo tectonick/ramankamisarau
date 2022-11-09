@@ -16,7 +16,7 @@ function News() {
   return (
     <div className="News">
       <h2>NEWS</h2>
-      <PaginatedItems Type={ArticleItems} items={Articles}/>
+      {Articles.length > 0 ? <PaginatedItems Type={ArticleItems} items={Articles}/>: <p>Nothing for now. Stay tuned for updates.</p>}
     </div>
   );
 }
