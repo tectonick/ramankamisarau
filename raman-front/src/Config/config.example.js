@@ -1,7 +1,6 @@
 const Config = {
     Api:{
-        Port:1337,
-        Host:"127.0.0.1"
+        Base:`127.0.0.1:1337/api`
     },
     Pagination:{
         ItemsPerPage:1
