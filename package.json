@@ -19,8 +19,9 @@
     "deploy": "git ftp push",
     "restart": "powershell .\\deploy\\restart.ps1",
     "status": "powershell .\\deploy\\check-status.ps1",
+    "init": "powershell .\\deploy\\init.ps1",
     "pipeline": "npm run git && npm run deploy && npm run restart && npm run status",
-    "pipeline-fresh": "npm run git && npm run deploy && npm run start && npm run status",
+    "pipeline-init": "npm run git && npm run deploy && npm run init && npm run status",
     "hotfix": "npm run git-amend && npm run deploy && npm run restart && npm run status"
   },
   "repository": {
