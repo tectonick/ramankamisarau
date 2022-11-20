@@ -24,7 +24,7 @@ function Gallery() {
 
   useEffect(() => {
     Api.getGalleryImages().then((data) => {
-      setGalleryImages(data.map(rawsource => isExternalLink(rawsource) ? rawsource : `http://${Config.Api.Host}:${Config.Api.Port}${rawsource}`));
+      setGalleryImages(data.map(rawsource => isExternalLink(rawsource) ? rawsource : `${Config.Api.Base}${rawsource}`));
     });
   }, []);
   return (
