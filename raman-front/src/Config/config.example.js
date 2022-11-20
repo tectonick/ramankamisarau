@@ -1,6 +1,6 @@
 const Config = {
     Api:{
-        Base:`127.0.0.1:1337/api`
+        Base:`127.0.0.1:1337`
     },
     Pagination:{
         ItemsPerPage:1

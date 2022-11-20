@@ -19,12 +19,12 @@ const Api =  {
         return images?.map(image => image.Src);
     },
     async getResourcesCollection(resource){
-        let result = await fetch(`${Config.Api.Base}/${resource}`);
+        let result = await fetch(`${Config.Api.Base}/api/${resource}`);
         let json = await result.json();
         return json.data?.map((resource) => resource.attributes);
     },
     async getSingleResource(resource){
-        let result = await fetch(`${Config.Api.Base}/${resource}`);
+        let result = await fetch(`${Config.Api.Base}/api/${resource}`);
         let json = await result.json();
         return json.data?.attributes;
     },
