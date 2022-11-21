@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prodrestart": "npm run killprod && npm run start",
-    "start": "npm run prodfrontbuild && nohup npm-run-all --parallel prodfront prodback &",
+    "start": "npm run prodfrontbuild && nohup npm-run-all --parallel prodback prodfront &",
     "dev": "npm-run-all --parallel devback devfront",
     "devback": "npm run --prefix ./raman-back start",
     "devfront": "npm run --prefix ./raman-front start",
@@ -13,15 +12,13 @@
     "prodfront": "nohup caddy start --config ./Caddyfile",
     "prodbackbuild": "npm run --prefix ./raman-back build",
     "prodfrontbuild": "npm run --prefix ./raman-front build && cp ./raman-front/build/index.html ./raman-front/build/404.html",
-    "killprod": "skill node && caddy stop",
+    "killprod": "skill node && skill caddy",
     "git": "git add * && git commit && git push",
     "git-amend": "git add * && git commit --amend && git push --force",
     "deploy": "git ftp push",
     "restart": "powershell .\\deploy\\restart.ps1",
     "status": "powershell .\\deploy\\check-status.ps1",
-    "init": "powershell .\\deploy\\init.ps1",
     "pipeline": "npm run git && npm run deploy && npm run restart && npm run status",
-    "pipeline-init": "npm run git && npm run deploy && npm run init && npm run status",
     "hotfix": "npm run git-amend && npm run deploy && npm run restart && npm run status"
   },
   "repository": {
