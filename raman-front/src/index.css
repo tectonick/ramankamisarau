@@ -46,6 +46,7 @@ body {
 }
 
 #page-container {
+  position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -290,4 +291,26 @@ ul[role="navigation"] li.selected a{
   color: var(--accent-color);
   margin: 0;
   font-size: 0.85rem;
+}
+
+.page-enter {
+  opacity: 0;
+  transform: scale(1.05);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 100ms, transform 100ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0ms, transform 0ms;
 }
