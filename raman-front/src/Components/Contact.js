@@ -13,7 +13,7 @@ function ContactInfo() {
 
   return (
     <div className="contact-info block">
-      <p>Feel free to contact me if you have some interesting artistic or other proposals</p>
+      {ContactData && <p>{ContactData.Text}</p>}
       {ContactData && (
         <a href={"mailto:" + ContactData.Email}>Email: {ContactData.Email}</a>
       )}{" "}

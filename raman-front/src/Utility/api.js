@@ -17,6 +17,9 @@ const Api =  {
     async getEmbedLink() {
         return (await this.getSingleResource("youtube"))?.EmbedLink;
     },
+    async getLayout() {
+        return await this.getSingleResource("layout");
+    },
     async getGalleryImages() {
         let images = await this.getResourcesCollection("gallery-images");
         return images?.map(image => image.Src);

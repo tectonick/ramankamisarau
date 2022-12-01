@@ -1,14 +1,23 @@
 import * as React from "react";
+import { useState, useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
+import Api from "../Utility/api";
 import Navbar from "../Components/Navbar";
 import { SwitchTransition, CSSTransition } from "react-transition-group";
 
 function Layout() {
   const location = useLocation();
+  const [Layout, setLayout] = useState({});
+
+  useEffect(() => {
+    Api.getLayout().then((data) => {
+      setLayout(data);
+    });
+  }, []);
 
   return (
     <div id="page-container">
-      <Navbar />
+      <Navbar layout={Layout}/>
 
       <SwitchTransition>
         <CSSTransition
@@ -22,7 +31,7 @@ function Layout() {
         </CSSTransition>
       </SwitchTransition>
 
-      <footer>© 2023 by Raman Kamisarau</footer>
+      <footer>{Layout?.Footer}</footer>
     </div>
   );
 }

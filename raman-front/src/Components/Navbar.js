@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import "../Styles/hamburgers.css";
 
-function Navbar() {
+function Navbar({layout}) {
   const menuList = useRef(null);
   const hamburger = useRef(null);
 
@@ -52,16 +52,17 @@ function Navbar() {
       </ul>
 
       <span id="social">
-        <a href="https://wa.me/41782363632">
+        {layout?.Messenger?.length >0 && <a href={layout?.Messenger}>
           <img src="/img/social/whatsapp.webp" alt=""></img>
-        </a>
-        <a href="https://www.facebook.com/ramankamisarau/">
+        </a>}
+        {layout?.Facebook?.length >0 && <a href={layout?.Facebook}>
           <img src="/img/social/facebook.webp" alt=""></img>
-        </a>
-        <a href="https://www.youtube.com/channel/UC6jt6uzB2x0KPzbLaVVceOw">
+        </a>}
+        {layout?.Youtube?.length >0 && <a href={layout?.Youtube}>
           <img src="/img/social/youtube.webp" alt=""></img>
-        </a>
+        </a>}
       </span>
+
 
       <button
         id="hamburger"

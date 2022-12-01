@@ -1,0 +1,27 @@
+{
+  "kind": "singleType",
+  "collectionName": "layouts",
+  "info": {
+    "singularName": "layout",
+    "pluralName": "layouts",
+    "displayName": "Layout"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Facebook": {
+      "type": "string"
+    },
+    "Youtube": {
+      "type": "string"
+    },
+    "Messenger": {
+      "type": "string"
+    },
+    "Footer": {
+      "type": "string"
+    }
+  }
+}
