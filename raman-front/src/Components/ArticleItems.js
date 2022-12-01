@@ -6,7 +6,7 @@ function ArticleItems({ items }) {
     <>
       {items.map((article) => (
         <Article
-          key={article.Title}
+          key={article.id}
           title={article.Title}
           description={article.Description}
           date={new Date(article.Date).toLocaleString()}

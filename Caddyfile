@@ -1,3 +1,6 @@
+www.ramankamisarau.com {
+    redir https://ramankamisarau.com{uri}
+}
 
 ramankamisarau.com {
         root * /home/raman/ramankamisarau/raman-front/build

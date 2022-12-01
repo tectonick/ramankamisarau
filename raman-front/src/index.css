@@ -233,6 +233,10 @@ nav ul li a:hover {
   background-color: black;
 }
 
+.block a:hover img{
+  filter:invert(1);
+}
+
 .contact-info a {
   color: white;
   background: none !important;
@@ -313,4 +317,17 @@ ul[role="navigation"] li.selected a{
   opacity: 0;
   transform: scale(0.95);
   transition: opacity 0ms, transform 0ms;
+}
+
+.concert a {
+  margin-right: 1px;
+}
+
+.concert a img {
+  width: 23px;
+  height: 23px;
+  opacity: 0.8;
+  margin-right: 5px;
+  position: relative;
+  top:6.2px;
 }

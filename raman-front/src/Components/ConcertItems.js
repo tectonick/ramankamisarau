@@ -6,7 +6,7 @@ function ConcertItems({ items }) {
     <>
       {items.map((concert) => (
         <Concert
-          key={concert.Title}
+          key={concert.id}
           title={concert.Title}
           place={concert.Place}
           description={concert.Description}

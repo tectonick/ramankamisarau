@@ -6,6 +6,7 @@ import Api from "../Utility/api";
 function Home() {
   const [LatestArticle, setLatestArticle] = useState({});
   const [NearestConcert, setNearestConcert] = useState({});
+  const [EmbedLink, setEmbedLink] = useState("");
 
   useEffect(() => {
     Api.getNearConcert().then((data) => {
@@ -13,6 +14,10 @@ function Home() {
     });
     Api.getLastArticle().then((data) => {
       setLatestArticle(data);
+    });
+
+    Api.getEmbedLink().then((data) => {
+      setEmbedLink(data);
     });
   }, []);
   return (
@@ -40,7 +45,7 @@ function Home() {
       )}
       <iframe
         id="main-youtube-video"
-        src="https://www.youtube.com/embed/xFHpvXL9Cvg"
+        src={EmbedLink}
         title="YouTube video player"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

@@ -17,6 +17,7 @@ function Concerts() {
       );
       selectedConcerts.sort((a,b) => Date.parse(a.Date) - Date.parse(b.Date))
       setConcertsList(selectedConcerts);
+      console.table(ConcertsList);
     });
   };
 

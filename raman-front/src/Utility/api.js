@@ -14,6 +14,9 @@ const Api =  {
     async getContactData() {
         return await this.getSingleResource("contact")
     },
+    async getEmbedLink() {
+        return (await this.getSingleResource("youtube"))?.EmbedLink;
+    },
     async getGalleryImages() {
         let images = await this.getResourcesCollection("gallery-images");
         return images?.map(image => image.Src);
@@ -21,12 +24,12 @@ const Api =  {
     async getResourcesCollection(resource){
         let result = await fetch(`${Config.Api.Base}/api/${resource}`);
         let json = await result.json();
-        return json.data?.map((resource) => resource.attributes);
+        return json.data?.map((resource) => {return { ...resource.attributes, id: resource.id }});
     },
     async getSingleResource(resource){
         let result = await fetch(`${Config.Api.Base}/api/${resource}`);
         let json = await result.json();
-        return json.data?.attributes;
+        return {...json.data?.attributes, id: resource.id};
     },
     async getNearConcert() {
         let concerts = await this.getConcerts();

@@ -40,6 +40,9 @@ function Gallery() {
           <img
             key={index}
             src={image}
+            data-type="image"
+            type="image"
+            types={["image"]}
             className="preview-image"
             loading="lazy"
             alt=""

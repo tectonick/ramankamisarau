@@ -1,0 +1,18 @@
+{
+  "kind": "singleType",
+  "collectionName": "youtubes",
+  "info": {
+    "singularName": "youtube",
+    "pluralName": "youtubes",
+    "displayName": "Youtube"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "EmbedLink": {
+      "type": "string"
+    }
+  }
+}
