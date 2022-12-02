@@ -319,11 +319,19 @@ ul[role="navigation"] li.selected a{
   transition: opacity 0ms, transform 0ms;
 }
 
-.concert a {
+.concert a, .article a {
   margin-right: 1px;
+  display: inline-block;
 }
 
-.concert a img {
+@media (max-width:410px) {
+  .block a {
+    display: block;
+    margin-bottom: 5px;
+  }
+}
+
+.concert a img, .article a img {
   width: 23px;
   height: 23px;
   opacity: 0.8;

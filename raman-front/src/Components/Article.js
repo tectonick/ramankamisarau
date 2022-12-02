@@ -8,7 +8,7 @@ function Article({supertitle, title, description, date, link}) {
             <p className='date'>{new Date(date).toDateString()}</p>
             <div className='separator'/>
             <div className='html-content' dangerouslySetInnerHTML={{ __html: description }} />
-            {link && <a href={link}>Read more</a>}
+            {link && <a href={link}><img src="/img/read.svg" alt=""></img>Read more</a>}
         </div>
      );
 }
