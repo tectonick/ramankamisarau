@@ -43,14 +43,14 @@ function Home() {
           link={"/news"}
         />
       )}
-      <iframe
+      {EmbedLink?.length>0 && <iframe
         id="main-youtube-video"
         src={EmbedLink}
         title="YouTube video player"
         frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowFullScreen
-      ></iframe>
+      ></iframe>}
     </div>
   );
 }
