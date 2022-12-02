@@ -1,26 +1,27 @@
 import React from 'react';
 import { atcb_action } from 'add-to-calendar-button';
 import 'add-to-calendar-button/assets/css/atcb.css';
+import Config from "../Config/config";
+import DateHelpers from "../Utility/date";
 
 function Concert({supertitle, title, place, description, date, link}) {
     const DateOptions = {
         timeStyle: "short",
         dateStyle: "medium"
     };
-    const CalendarConcertDuration = 2*60*60*1000;
 
     let startDateTime = new Date(date);
-    let endDateTime = new Date(startDateTime.getTime() + CalendarConcertDuration);
+    let endDateTime = DateHelpers.shiftDate(startDateTime, Config.Calendar.ConcertDuration);
 
     function add2calendar(e){
         e.preventDefault();
 
         atcb_action({
             name: title,
-            startDate: startDateTime.toISOString().substring(0,10),
-            startTime: `${startDateTime.getHours()}:${startDateTime.getMinutes()}`,
-            endDate: endDateTime.toISOString().substring(0,10),
-            endTime: `${endDateTime.getHours()}:${endDateTime.getMinutes()}`,
+            startDate: DateHelpers.getISODate(startDateTime),
+            startTime: DateHelpers.getTimeHHMM(startDateTime),
+            endDate: DateHelpers.getISODate(endDateTime),
+            endTime: DateHelpers.getTimeHHMM(endDateTime),
             description: description.substring(0,500),
             options: ['Apple', 'Google', 'iCal', 'Microsoft365', 'Outlook.com', 'Yahoo'],
             location:place,
