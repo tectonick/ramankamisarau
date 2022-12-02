@@ -6,8 +6,11 @@ ramankamisarau.com {
         root * /home/raman/ramankamisarau/raman-front/build
         route /backend* {
             uri strip_prefix /backend
-            reverse_proxy 127.0.0.1:1337
+            reverse_proxy 46.101.212.75:1337
         }
-        try_files {path} /index.html
-	    file_server
+
+        route /* {
+            try_files {path} /index.html
+	        file_server
+        }
 }
