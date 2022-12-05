@@ -1,0 +1,6 @@
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=tectonick_ramankamisarau&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=tectonick_ramankamisarau)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=tectonick_ramankamisarau&metric=bugs)](https://sonarcloud.io/summary/new_code?id=tectonick_ramankamisarau)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=tectonick_ramankamisarau&metric=vulnerabilities)](https://sonarcloud.io/summary/new_code?id=tectonick_ramankamisarau)
+[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=tectonick_ramankamisarau&metric=code_smells)](https://sonarcloud.io/summary/new_code?id=tectonick_ramankamisarau)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=tectonick_ramankamisarau&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=tectonick_ramankamisarau)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=tectonick_ramankamisarau&metric=ncloc)](https://sonarcloud.io/summary/new_code?id=tectonick_ramankamisarau)
