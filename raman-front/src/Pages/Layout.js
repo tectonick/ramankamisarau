@@ -1,9 +1,9 @@
-import * as React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
-import Api from "../Utility/api";
-import Navbar from "../Components/Navbar";
 import { SwitchTransition, CSSTransition } from "react-transition-group";
+import Navbar from "../Components/Navbar";
+import Api from "../Utility/api";
+
 
 function Layout() {
   const location = useLocation();

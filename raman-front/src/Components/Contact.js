@@ -8,7 +8,6 @@ function ContactInfo() {
     Api.getContactData().then((data) => {
       setContactData(data);
     });
-    //   setContactData({email: "raman.kamisarau@gmail.com", phone: "+41782363632"});
   }, []);
 
   return (

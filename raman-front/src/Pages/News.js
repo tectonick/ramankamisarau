@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import ArticleItems from "../Components/ArticleItems";
-import Api from "../Utility/api";
 import PaginatedItems from "../Components/PaginatedItems";
-
+import Api from "../Utility/api";
 
 function News() {
   const [Articles, setArticles] = useState([]);
