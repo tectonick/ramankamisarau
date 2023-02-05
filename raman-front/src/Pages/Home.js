@@ -39,7 +39,7 @@ function Home() {
           supertitle="LATEST NEWS"
           title={LatestArticle.Title}
           description={LatestArticle.Description}
-          date={new Date(LatestArticle.Date).toLocaleString()}
+          date={LatestArticle.Date}
           link={"/news"}
         />
       )}
