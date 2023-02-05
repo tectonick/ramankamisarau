@@ -4,7 +4,6 @@ import ConcertItems from "../Components/ConcertItems";
 import PaginatedItems from "../Components/PaginatedItems";
 
 function Concerts() {
-
   const [ConcertsList, setConcertsList] = useState([]);
 
   const getConcerts = (past = false) => {
@@ -17,7 +16,6 @@ function Concerts() {
       );
       selectedConcerts.sort((a,b) => Date.parse(a.Date) - Date.parse(b.Date))
       setConcertsList(selectedConcerts);
-      console.table(ConcertsList);
     });
   };
 

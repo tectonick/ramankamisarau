@@ -9,7 +9,7 @@ function ArticleItems({ items }) {
           key={article.id}
           title={article.Title}
           description={article.Description}
-          date={new Date(article.Date).toLocaleString()}
+          date={new Date(article.Date)}
         />
       ))}
     </>

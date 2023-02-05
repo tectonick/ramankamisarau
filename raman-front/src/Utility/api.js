@@ -42,7 +42,7 @@ const Api =  {
     },
     async getLastArticle() {
         let articles = await this.getArticles();
-        return articles?.sort((a,b) => b.Date - a.Date)[0];
+        return articles?.sort((a,b) => Date.parse(b.Date) - Date.parse(a.Date))[0];
     },
 }
 
