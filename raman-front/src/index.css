@@ -1,7 +1,8 @@
 /* General */
 
 :root {
-  --accent-color: rgb(194, 177, 130);
+  --accent-color: rgb(255, 255, 255);
+  --secondary-color: rgb(222, 222, 222);
 }
 
 @font-face {
@@ -17,17 +18,25 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
-  color: white;
+  color: var(--secondary-color);
   font-family: 'Manrope-Thin', 'Lucida Sans', Arial, sans-serif;
   letter-spacing: 0.05rem;
   overflow: overlay;
 }
 
 #root {
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.65)), url("../public/img/background.webp");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../public/img/background.jpg");
   background-attachment: fixed, fixed;
   background-size: cover, cover;
+  background-repeat: no-repeat;
   background-position-x: center, center;
+}
+
+@media (max-width:500px) {
+  #root {
+    background-size: auto, 1000px;
+    background-position-x: right, -500px;
+  }
 }
 
 #page-container {
@@ -70,7 +79,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: white;
+  color: var(--secondary-color);
   transition: color 0.2s;
 }
 
@@ -124,7 +133,7 @@ ul[role="navigation"] li.selected a{
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--secondary-color);
 }
 
 h1 {
@@ -156,13 +165,13 @@ h2#pianist {
 
 .block a {
   color: black;
-  background-color: white;
+  background-color:var(--secondary-color);
   padding: 5px 10px;
   transition: color 0.3s, background-color 0.3s;
 }
 
 .block a:hover {
-  color: white;
+  color: var(--secondary-color);
   background-color: black;
 }
 
@@ -185,7 +194,7 @@ h2#pianist {
 }
 
 .contact-info a {
-  color: white;
+  color: var(--secondary-color);
   background: none !important;
   display: block;
 }
@@ -199,7 +208,7 @@ h2#pianist {
   padding: 0;
   background: none;
   font-size: 1rem;
-  color: white;
+  color: var(--secondary-color);
   cursor: pointer;
 }
 
@@ -243,7 +252,7 @@ pre {
 }
 
 .html-content h1 {
-  color: white;
+  color: var(--secondary-color);
   font-size: 2rem;
 }
 
