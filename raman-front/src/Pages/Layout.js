@@ -31,7 +31,13 @@ function Layout() {
         </CSSTransition>
       </SwitchTransition>
 
-      <footer>{Layout?.Footer}</footer>
+
+      <footer>
+        {Layout?.Footer}
+        <a class="me" target="_blank" href="https://nickkiselev.me/">
+          <img width="100px" src="/img/nick-logo-white.png" alt="" />
+        </a>
+      </footer>
     </div>
   );
 }

@@ -56,8 +56,9 @@ main {
 
 footer {
   min-height: 35px;
-  margin: 0 15%;
+  margin: 0 10%;
   padding-top: 15px;
+  padding-bottom: 5px;
 }
 
 nav {
@@ -357,6 +358,17 @@ pre {
   opacity: 0;
   transform: scale(0.95);
   transition: opacity 0ms, transform 0ms;
+}
+
+.me {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  opacity: 0.3;
+}
+
+.me:hover {
+  opacity: 0.5;
 }
 
 /* Utility */
