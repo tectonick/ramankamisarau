@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { atcb_action } from 'add-to-calendar-button';
 import 'add-to-calendar-button/assets/css/atcb.css';
 import Config from "../Config/config";
@@ -9,9 +9,18 @@ function Concert({supertitle, title, place, description, date, link}) {
         timeStyle: "short",
         dateStyle: "medium"
     };
+    const CollapseLengthThreshold = 300;
 
     let startDateTime = new Date(date);
     let endDateTime = DateHelpers.shiftDate(startDateTime, Config.Calendar.ConcertDuration);
+
+    let isCollapsible = description.length > CollapseLengthThreshold;
+    const [Collapsed, setCollapsed] = useState(isCollapsible ? true : false);
+
+    function toggleCollapsed(e){
+        e.preventDefault();
+        setCollapsed(!Collapsed);
+    }
 
     function add2calendar(e){
         e.preventDefault();
@@ -37,8 +46,9 @@ function Concert({supertitle, title, place, description, date, link}) {
             <p className='date'>{startDateTime.toLocaleString("en-EN", DateOptions)}</p>
             <div className='separator'/>
             <p>{place}</p>
-            <div className='html-content' dangerouslySetInnerHTML={{ __html: description }} />
-            {link && <a href={link}><img src="/img/read.svg" alt=""></img>Read more</a>} {<a onClick={(e)=>add2calendar(e)} href=""><img src="/img/calendar.svg" alt=""></img>Add to calendar</a>}
+            <div className={`html-content collapsible ${Collapsed ? 'collapsed': ''}`} dangerouslySetInnerHTML={{ __html: description }} />
+            {isCollapsible && <a href="" className='collapse-button' onClick={(e) => toggleCollapsed(e)}><img src="/img/expand.svg" alt=""></img>{Collapsed ? 'Show more' : 'Collapse'}</a>}
+            {link && <a href={link}><img src="/img/read.svg" alt=""></img>Read more</a>}{<a onClick={(e)=>add2calendar(e)} href=""><img src="/img/calendar.svg" alt=""></img>Add to calendar</a>}
         </div>
      );
 }

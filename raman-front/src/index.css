@@ -181,7 +181,7 @@ h2#pianist {
 }
 
 .concert a, .article a {
-  margin-right: 1px;
+  margin-right: 2px;
   display: inline-block;
 }
 
@@ -261,6 +261,14 @@ pre {
   margin: 10px;
 }
 
+
+.collapsible.collapsed {
+  max-height: 15rem;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 2rem, rgba(0, 0, 0, 1) 20px, transparent 90%);
+  mask-image: linear-gradient(rgba(0, 0, 0, 1), transparent);
+}
+
 /* Gallery */
 
 .gallery-grid {
@@ -329,7 +337,7 @@ pre {
   }
 }
 
-@media (max-width:410px) {
+@media (max-width:560px) {
   .block a {
     display: block;
     margin-bottom: 5px;
