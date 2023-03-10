@@ -10,7 +10,7 @@ function ConcertItems({ items }) {
           title={concert.Title}
           place={concert.Place}
           description={concert.Description}
-          date={new Date(concert.Date).toLocaleString()}
+          date={new Date(concert.Date)}
           link={concert.Link}
         />
       ))}
