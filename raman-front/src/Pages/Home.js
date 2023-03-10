@@ -30,7 +30,7 @@ function Home() {
           title={NearestConcert.Title}
           place={NearestConcert.Place}
           description={NearestConcert.Description}
-          date={new Date(NearestConcert.Date).toLocaleString()}
+          date={new Date(NearestConcert.Date)}
           link={"/concerts"}
         />
       )}

@@ -14,7 +14,8 @@ function Concert({supertitle, title, place, description, date, link}) {
     let startDateTime = new Date(date);
     let endDateTime = DateHelpers.shiftDate(startDateTime, Config.Calendar.ConcertDuration);
 
-    let isCollapsible = description.length > CollapseLengthThreshold;
+    // TODO Extract
+    let isCollapsible = description ? (description.length > CollapseLengthThreshold) : false;
     const [Collapsed, setCollapsed] = useState(isCollapsible ? true : false);
 
     function toggleCollapsed(e){
@@ -47,7 +48,7 @@ function Concert({supertitle, title, place, description, date, link}) {
             <div className='separator'/>
             <p>{place}</p>
             <div className={`html-content collapsible ${Collapsed ? 'collapsed': ''}`} dangerouslySetInnerHTML={{ __html: description }} />
-            {isCollapsible && <a href="" className='collapse-button' onClick={(e) => toggleCollapsed(e)}><img src="/img/expand.svg" alt=""></img>{Collapsed ? 'Show more' : 'Collapse'}</a>}
+            {isCollapsible && <a href="" className='collapse-button' onClick={(e) => toggleCollapsed(e)}><img src="/img/expand.svg" alt=""></img>{Collapsed ? 'Expand' : 'Collapse'}</a>}
             {link && <a href={link}><img src="/img/read.svg" alt=""></img>Read more</a>}{<a onClick={(e)=>add2calendar(e)} href=""><img src="/img/calendar.svg" alt=""></img>Add to calendar</a>}
         </div>
      );

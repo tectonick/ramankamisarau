@@ -14,7 +14,7 @@
     "buildfront": "npm run --prefix ./raman-front build",
     "killprod": "skill node && skill caddy",
     "git": "git add * && git commit && git push",
-    "git-amend": "git add * && git commit --amend && git push --force",
+    "git-redo": "git add * && git commit --amend && git push --force",
     "deploy": "git ftp push",
     "restart": "powershell .\\deploy\\restart.ps1",
     "status": "powershell .\\deploy\\check-status.ps1",

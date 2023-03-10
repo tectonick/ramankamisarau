@@ -263,10 +263,14 @@ pre {
 
 
 .collapsible.collapsed {
-  max-height: 15rem;
+  max-height: 12rem;
   overflow: hidden;
-  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 2rem, rgba(0, 0, 0, 1) 20px, transparent 90%);
+  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 1.5rem, rgba(0, 0, 0, 1) 20px, transparent 90%);
   mask-image: linear-gradient(rgba(0, 0, 0, 1), transparent);
+}
+
+.collapsible.collapsed.collapsed-long {
+  max-height: 20rem;
 }
 
 /* Gallery */
