@@ -34,7 +34,7 @@ function Layout() {
 
       <footer>
         {Layout?.Footer}
-        <a class="me" target="_blank" href="https://nickkiselev.me/">
+        <a className="me" target="_blank" href="https://nickkiselev.me/" rel="noreferrer">
           <img width="100px" src="/img/nick-logo-white.png" alt="" />
         </a>
       </footer>

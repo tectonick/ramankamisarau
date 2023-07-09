@@ -4,8 +4,8 @@ import Article from "../Components/Article";
 import Api from "../Utility/api";
 
 function Home() {
-  const [LatestArticle, setLatestArticle] = useState({});
-  const [NearestConcert, setNearestConcert] = useState({});
+  const [LatestArticle, setLatestArticle] = useState();
+  const [NearestConcert, setNearestConcert] = useState();
   const [EmbedLink, setEmbedLink] = useState("");
 
   useEffect(() => {
