@@ -92,16 +92,18 @@ ul[role="navigation"] {
   list-style: none;
   display: flex;
 }
+
 ul[role="navigation"] li {
   cursor: pointer;
   margin: 0 5px;
 }
+
 ul[role="navigation"] li a:hover {
-  color:var(--accent-color);
+  color: var(--accent-color);
 }
 
-ul[role="navigation"] li.selected a{
-  color:var(--accent-color);
+ul[role="navigation"] li.selected a {
+  color: var(--accent-color);
 }
 
 .hamburger {
@@ -115,7 +117,7 @@ ul[role="navigation"] li.selected a{
 /* Scrollbar */
 
 ::-webkit-scrollbar {
-  width:7px;
+  width: 7px;
 }
 
 ::-webkit-scrollbar-track {
@@ -166,7 +168,7 @@ h2#pianist {
 
 .block a {
   color: black;
-  background-color:var(--secondary-color);
+  background-color: var(--secondary-color);
   padding: 5px 10px;
   transition: color 0.3s, background-color 0.3s;
 }
@@ -176,22 +178,24 @@ h2#pianist {
   background-color: black;
 }
 
-.block a:hover img{
-  filter:invert(1);
+.block a:hover img {
+  filter: invert(1);
 }
 
-.concert a, .article a {
+.concert a,
+.article a {
   margin-right: 2px;
   display: inline-block;
 }
 
-.concert a img, .article a img {
+.concert a img,
+.article a img {
   width: 23px;
   height: 23px;
   opacity: 0.8;
   margin-right: 5px;
   position: relative;
-  top:6.2px;
+  top: 6.2px;
 }
 
 .contact-info a {
@@ -299,28 +303,33 @@ pre {
     padding-top: 15%;
     margin: 0 5%;
   }
-  
+
   h1 {
     letter-spacing: 0.3rem;
     font-size: 3rem;
   }
+
   .hamburger {
     display: inline-block !important;
     position: absolute;
     right: 3%;
     top: 0;
+    z-index: 1500;
+
   }
 
   nav ul {
     position: fixed;
     right: 0;
-    top: 10px;
+    top: 0;
     background-color: black;
     width: 60%;
     height: 100%;
     padding-top: 30%;
     padding-right: 5%;
     transition: right 0.5s;
+    margin: 0;
+    z-index: 1000;
   }
 
   nav ul.is-hidden {
