@@ -23,7 +23,7 @@ function Home() {
   return (
     <div className="Home">
       <h1>Raman Kamisarau</h1>
-      <h2 id="pianist">Concert pianist based in Switzerland</h2>
+      <h2 id="pianist">Concert pianist and piano teacher in Switzerland</h2>
       {NearestConcert && (
         <Concert
           supertitle="UPCOMING PERFORMANCE"
@@ -43,14 +43,16 @@ function Home() {
           link={"/news"}
         />
       )}
-      {EmbedLink?.length>0 && <iframe
-        id="main-youtube-video"
-        src={EmbedLink}
-        title="YouTube video player"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-      ></iframe>}
+      {EmbedLink?.length > 0 && (
+        <iframe
+          id="main-youtube-video"
+          src={EmbedLink}
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowFullScreen
+        ></iframe>
+      )}
     </div>
   );
 }
